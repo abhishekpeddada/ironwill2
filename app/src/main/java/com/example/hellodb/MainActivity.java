@@ -152,7 +152,8 @@ public class MainActivity extends AppCompatActivity {
         mDbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
+                mobileArrayList.clear();
+                stringList.clear();
 
                 for (DataSnapshot ds : snapshot.getChildren()) {
                     LocalDateTime now = LocalDateTime.now();
