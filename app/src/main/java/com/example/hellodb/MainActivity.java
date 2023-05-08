@@ -5,6 +5,7 @@ import static android.content.ContentValues.TAG;
 import android.app.WallpaperColors;
 import android.app.WallpaperManager;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         WallpaperManager wallpaperManager = WallpaperManager.getInstance(getApplicationContext());
         WallpaperColors wallpaperColors = wallpaperManager.getWallpaperColors(WallpaperManager.FLAG_SYSTEM);
         int primaryColor = wallpaperColors.getPrimaryColor().toArgb();
-        int secondaryColor = wallpaperColors.getSecondaryColor().toArgb();
+        int secondaryColor = Color.WHITE;
         int tertiaryColor = wallpaperColors.getTertiaryColor().toArgb();
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(primaryColor));
